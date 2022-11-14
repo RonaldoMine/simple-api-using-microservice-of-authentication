@@ -12,7 +12,7 @@ public class TestController {
     @GetMapping("/")
     public String hello() {
         UserAuth user  = (UserAuth) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return "Hello World "+user.getFirst_name()+", your id is : "+user.getId()+", your role is "+user.getRoles();
+        return "Hello World "+user.getLast_name()+" "+user.getFirst_name()+", your id is : "+user.getId()+", your role is "+user.getRoles();
     }
 
     @GetMapping("/admin")
